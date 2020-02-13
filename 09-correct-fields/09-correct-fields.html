@@ -32,39 +32,51 @@
         <h2>Text entry</h2>
       </header>
       <fieldset>
-        <legend>Simple text: Nickname</legend>
+        <legend>
+          Simple text: Nickname
+        </legend>
         <label>
-          <input type="text" id="nickname" name="nickname" required>
+          <input type="text" name="nickname" required>
         </label>
       </fieldset>
       <fieldset>
-        <legend>Multi-line Text: Biography</legend>
+        <legend>
+          Multi-line Text: Biography
+        </legend>
         <label>
-          <input type="text" id="biography" name="biography" required>
+          <textarea rows="10" cols="30" name="biography" required></textarea>
         </label>
       </fieldset>
       <fieldset>
-        <legend>Mobile phone number</legend>
+        <legend>
+          Mobile phone number
+        </legend>
         <label>
-          <input type="text" id="mobile-phone-number" name="mobie-phone-number" required>
+          <input type="tel" id="mobile_phone_number" name="mobile_phone_number" required>
         </label>
       </fieldset>
       <fieldset>
-        <legend>Website</legend>
+        <legend>
+          Website
+        </legend>
         <label>
-          <input type="text" id="website" name="website" required>
+          <input type="url" id="website" name="website" required>
         </label>
       </fieldset>
       <fieldset>
-        <legend>Date of birth</legend>
+        <legend>
+          Date of birth
+        </legend>
         <label>
-          <input type="text" id="date-of-birth" name="date-of-birth" required>
+          <input type="date" id="date_of_birth" name="date_of_birth" required>
         </label>
       </fieldset>
       <fieldset>
-        <legend>Age</legend>
+        <legend>
+          Age
+        </legend>
         <label>
-          <input type="text" id="age" name="age" required>
+          <input type="number" id="age" name="age" required>
         </label>
       </fieldset>
       <div>
@@ -77,7 +89,9 @@
         <h2>Boolean / Binary choices</h2>
       </header>
       <fieldset>
-        <legend>True / False, with a default choice</legend>
+        <legend>
+          True / False, with a default choice
+        </legend>
         <p>
           <label>
             <input type="radio" name="choice" value="true" checked>
@@ -86,14 +100,16 @@
         </p>
         <p>
           <label>
-            <input type="radio" name="choice" value="false" checked>
+            <input type="radio" name="choice" value="false">
             False
           </label>
         </p>
 
       </fieldset>
       <fieldset>
-        <legend>Confirm</legend>
+        <legend>
+          Confirm
+        </legend>
         <input type="checkbox" name="confirm" value="true" required>
       </fieldset>
       <fieldset>
@@ -123,7 +139,9 @@
         <h2>Single choice from a set of options</h2>
       </header>
       <fieldset>
-        <legend>Small list of values</legend>
+        <legend>
+          Small list of values
+        </legend>
         <ul>
           <li>
             <label>
@@ -152,11 +170,13 @@
         </ul>
       </fieldset>
       <fieldset>
-        <legend>Large list of values</legend>
+        <legend>
+          Large list of values
+        </legend>
         <label for="birds">
           Select a bird:
         </label>
-        <select id="birds">
+        <select id="birds" name="birds">
           <option value="ducks">Ducks</option>
           <option value="eagles">Eagles</option>
           <option value="heron">Herons</option>
@@ -177,7 +197,9 @@
         <h2>Multiple choices from a set of options</h2>
       </header>
       <fieldset>
-        <legend>Small list of values</legend>
+        <legend>
+          Small list of values
+        </legend>
         <ul>
           <li>
             <label>
@@ -206,11 +228,13 @@
         </ul>
       </fieldset>
       <fieldset>
-        <legend>Large list of values</legend>
+        <legend>
+          Large list of values
+        </legend>
         <label for="fruits">
-          Select birds:
+          Select fruits:
         </label>
-        <select multiple id="fruits">
+        <select multiple id="fruits" name="fruits">
           <option value="apples">Apples</option>
           <option value="bananas">Bananas</option>
           <option value="grapes">Grapes</option>
@@ -218,11 +242,13 @@
         </select>
       </fieldset>
       <fieldset>
-        <legend>Large list of values</legend>
+        <legend>
+          Large list of values
+        </legend>
         <label for="birds">
           Select birds:
         </label>
-        <select multiple>
+        <select multiple name="birds">
           <option value="ducks">Ducks</option>
           <option value="eagles">Eagles</option>
           <option value="herons">Herons</option>
@@ -243,27 +269,36 @@
         <h2>Other form fields</h2>
       </header>
       <fieldset>
-        <legend>Hidden</legend>
+        <legend>
+          Hidden
+        </legend>
         <input type="hidden" name="signed" value="true">
       </fieldset>
       <fieldset>
-        <legend>File(s)</legend>
-        <label for="file">Select a file:
+        <legend>
+          File(s)
+        </legend>
+        <label for="file">
+          Select a file:
         </label>
-        <input type="file" id="file" name="myfile" required>
+        <input type="file" id="file" name="onja_logo_png" required>
       </fieldset>
       <fieldset>
-        <legend>Range</legend>
+        <legend>
+          Range
+        </legend>
         <input type="range" id="bearing" name="bearing" min="0" max="359">
       </fieldset>
       <fieldset>
-        <legend>Colour</legend>
-        <input type="color">
-       </fieldset>
-          <div>
-            <button type="submit" name="form" value="other">Send</button>
-          </div>
-      </form>
+        <legend>
+          Colour
+        </legend>
+        <input type="color" name="background_colour">
+      </fieldset>
+      <div>
+        <button type="submit" name="form" value="other">Send</button>
+      </div>
+    </form>
   </main>
 </body>
 

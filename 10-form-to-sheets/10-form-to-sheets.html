@@ -14,87 +14,86 @@
   <form action="https://script.google.com/macros/s/AKfycbx_k22UijbL8nV_HE_eFCqonZ5LtCmyZqLd_wvG3_lWoAdLGWI/exec"
     method="POST">
 
-  <fieldset>
-    <legend>
-      Contributor<br>
-    </legend>
-    <label>
-      <input type="hidden" id="contributor" name="contributor" value="Sandy">
-    </label>
-  </fieldset>
-  <fieldset>
-    <legend>
-      Artist's name<br>
-    </legend>
-    <p>
-    <label>
-      <input type="text" id="artist_name" name="artist_name" value="Wendy Cathalina" required>
-    </label>
-    </p>
-  </fieldset>
-  <fieldset>
-    <legend>
-      Artist's ID<br>
-    </legend>
-    <p>
-    <label>
-    <input type="text" id="artist_id" name="artist_id" value="wendy_cathalina" required>
-    </label>
-    </p>
-  </fieldset>
-  <fieldset>
-    <legend>
-      Genre<br>
-    </legend>
-    <label for="genre">
-      Select a genre:
-    </label>
-    <select id="genre" name="genre">
-      <option value="slow">Slow</option>
-      <option value="salegy">Salegy</option>
-      <option value="tsapiky">Tsapiky</option>
-      <option value="watsawatsa">Watsawatsa</option>
-      <option value="malesa">Malesa</option>
-      <option value="rnb">RNB</option>
-      <option value="pop">POP</option>
-      <option value="kawitry">Kawitry</option>
-      <option value="dombolo">Dombolo</option>
-    </select>
-  </fieldset>
-  <fieldset>
-    <legend>
-      Photo web adress<br>
-    </legend>
-    <label>
-      <input type="text" id="photo_url" name="photo_url" required>
-    </label>
-  </fieldset>
-  <fieldset>
-    <legend>
-      Biography<br>
-    </legend>
-    <label>
-      <textarea rows="10" cols="60" name="biography" required>
+    <fieldset>
+      <legend>
+        Contributor<br>
+      </legend>
+      <label>
+        <input type="hidden" id="contributor" name="contributor" value="Sandy">
+      </label>
+    </fieldset>
+    <fieldset>
+      <legend>
+        Artist's name<br>
+      </legend>
+      <p>
+        <label>
+          <input type="text" id="artist_name" name="artist_name" required>
+        </label>
+      </p>
+    </fieldset>
+    <fieldset>
+      <legend>
+        Artist's ID<br>
+      </legend>
+      <p>
+        <label>
+          <input type="text" id="artist_id" name="artist_id" required>
+        </label>
+      </p>
+      <p>
+        Artist's ID must be low case and please use underscore(_) instead of space.
+      </p>
+    </fieldset>
+    <fieldset>
+      <legend>
+        Genre<br>
+      </legend>
+      <label for="genre">
+        Select a genre:
+      </label>
+      <select id="genre" name="genre">
+        <optgroup label="Malagasy genre">
+          <option value="slow">Slow</option>
+          <option value="salegy">Salegy</option>
+          <option value="tsapiky">Tsapiky</option>
+          <option value="watsawatsa">Watsawatsa</option>
+          <option value="malesa">Malesa</option>
+          <option value="rnb">RNB</option>
+          <option value="pop">POP</option>
+          <option value="kawitry">Kawitry</option>
+          <option value="dombolo">Dombolo</option>
+        </optgroup>
+      </select>
+    </fieldset>
+    <fieldset>
+      <legend>
+        Photo web adress<br>
+      </legend>
+      <label>
+        <input type="url" id="photo_url" name="photo_url" required>
+      </label>
+    </fieldset>
+    <fieldset>
+      <legend>
+        Biography<br>
+      </legend>
+      <label>
+        <textarea rows="10" cols="60" name="biography" required>
           </textarea>
-    </label>
-  </fieldset>
-  <fieldset>
-    <legend>
-      Website<br>
-    </legend>
-    <label>
-      <input type="text" id="website" name="website" required>
-    </label>
-  </fieldset>
-
-
-    <!--
-        The google sheet can be found at: https://docs.google.com/spreadsheets/d/1Vnkb5rE1kgXFMt2So3RwfvfLwayVtATt1o9NM-ry9UI/edit?usp=sharing
-        Create a field for each cell in the Google Sheet.
-      -->
-      <div>
-    <button type="submit">Save</button>
-      </div>
+      </label>
+    </fieldset>
+    <fieldset>
+      <legend>
+        Website<br>
+      </legend>
+      <label>
+        <input type="url" id="website" name="website" required>
+      </label>
+    </fieldset>
+    <div>
+      <button type="submit">Save</button>
+    </div>
   </form>
 </body>
 
