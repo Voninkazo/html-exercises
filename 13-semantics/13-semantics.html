@@ -1,34 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
-    <title>
-      13: Semantic HTML
-    </title>
-  </head>
-  <body>
-    <header>
-      <h1>
-        Semantic HTML
-      </h1>
-    </header>
-    <main>
 
-      <section>
-        <h2>A menu of a list of links</h2>
-        <!--
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>
+    13: Semantic HTML
+  </title>
+</head>
+
+<body>
+  <header>
+    <h1>
+      Semantic HTML
+    </h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>A menu of a list of links</h2>
+      <nav>
+        <ul>
+          <li>
+            <a href="https://www.dndbeyond.com/home">Home</a>
+          </li>
+          <li>
+            <a href="https://www.dndbeyond.com/service">Our services</a>
+          </li>
+          <li>
+            <a href="https://www.dndbeyond.com/about">About us</a>
+          </li>
+          <li>
+            <a href="https://www.dndbeyond.com/contact">Contact</a>
+          </li>
+        </ul>
+      </nav>
+      <!--
           1. Create a list of links to form a navigational element. The links are:
             - "Home" links to "/"
             - "Our services" links to "/services"
             - "About us" links to "/about"
             - "Contact us" links to "/contact"
         -->
-      </section>
+    </section>
 
-      <section>
-        <h2>A profile update form</h2>
-        <!--
+    <section>
+      <h2>A profile update form</h2>
+      <form action="https://www.dndbeyond.com/profile/save" method="POST">
+      </form>
+      <fieldset>
+        <legend>
+          First name
+        </legend>
+        <label>
+          <input type="text" id="profile_first_name" name="profile_first_name" required>
+        </label>
+      </fieldset>
+      <fieldset>
+        <legend>
+          Family name
+        </legend>
+        <label>
+          <input type="text" id="profile_family_name" name="profile_family_name" required>
+        </label>
+      </fieldset>
+      <fieldset>
+        <legend>
+          Email address
+        </legend>
+        <label>
+          <input type="email" name="username" required>
+        </label>
+      </fieldset>
+      <fieldset>
+        <legend>
+          Phone number
+        </legend>
+        <label>
+          <input type="tel" name="phone">
+        </label>
+      </fieldset>
+      <fieldset>
+        <legend>
+          Gender
+        </legend>
+        <input type="radio" name="gender" value="male">m<br>
+        <input type="radio" name="gender" value="female">f<br>
+        <input type="radio" name="gender" value="not disclose">na<br>
+      </fieldset>
+      <fieldset>
+        <legend>
+          Photo
+        </legend>
+        <label>
+          <input type="url" id="profile_photo" name="profile_photo">
+        </label>
+        <p>
+          The only acceptable formats are PNGs, JPGs, and WebP.
+        </p>
+      </fieldset>
+    </section>
+    <!--
           2. Build a form that posts to "/profile/save". In this form we want the user to be able to update their profile, the form needs the following…
 
           The user's:
@@ -41,11 +113,9 @@
               - Prefer to not disclose, "na"
             - Photo, optional, as "profile_photo". The user can upload a photo if they want. We only accept PNGs, JPGs, and WebP formats.
         -->
-      </section>
-
-      <section>
-        <h2>An excerpt</h2>
-        <!--
+    <section>
+      <h2>An excerpt</h2>
+      <!--
           3. This excerpt is from a short story called "The story of your life" by "Ted Chiang". Supply the attribution to the author and their title, then mark-up the following excerpt correctly:
 
           "The only reason you had me was so you could get a maid you wouldn't have to pay," you'll say bitterly, dragging the vacuum cleaner out of the closet.
@@ -54,11 +124,58 @@
 
           "If you weren't my mother, this would be illegal," you'll say, seething as you unwind the power cord and plug it into the wall outlet.
         -->
-      </section>
+      <p>
+        <q>The <strong>only</strong> reason you had me was so you could get a maid you wouldn't pay</q>, you'll say
+        bitterly, dragging the vacuum cleaner out of the closet.
+      </p>
+      <p>
+        <q><em>That's right!</em></q> I'll say. <q>Thirteen years ago I knew the carpets would need vacuuming around
+          now, and having a baby seemed to be the cheapest and easiest way to get the job done. Now kindly get on with
+          it.</q>
+      </p>
+      <p>
+        <q>If you weren't my mother, this would be illegal,</q> you'll say , seething as you unwind the power cord and
+        plug it into the wall outlet.
+      </p>
+    </section>
 
-      <section>
-        <h2>A table</h2>
-        <!--
+    <section>
+      <h2>A table</h2>
+      <table>
+        <caption hidden>
+          Names of 03 people with thier ages,Weight and height.
+        </caption>
+        <thead>
+          <tr>
+            <th scope="col" id="header_name">Name</th>
+            <th scope="col" id="header_age">Age</th>
+            <th scope="col" id="header_weight">Weight</th>
+            <th scope="col" id="header_height">Height</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th headers="header_name" scope="row" id="row_fred">Fred</th>
+            <td headers="row_fred header_age">23</td>
+            <td headers="row_fred header_weight">74kg</td>
+            <td headers="row_fred header_height">182cm</td>
+          </tr>
+          <tr>
+            <th headers="header_name" scope="row" id="row_anne">Anne</th>
+            <td headers="row_anne header_age">26</td>
+            <td headers="row_anne header_weight">56kg</td>
+            <td headers="row_anne header_height">173cm</td>
+          </tr>
+          <tr>
+            <th headers="header_name" scope="row" id="row_judith">Judith</th>
+            <td headers="row_judith header_age">19</td>
+            <td headers="row_judith header_weight">51kg</td>
+            <td headers="row_judith header_height">168cm</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <!--
           4. We need a table, with the following column headers:
 
             - Name
@@ -74,11 +191,15 @@
 
           Please provide a summary of the student's information.
         -->
-      </section>
-
-      <section>
-        <h2>Search results</h2>
-        <!--
+    <section>
+      <h2>
+        Search results
+      </h2>
+      <a href="search.html">
+        Search page
+      </a>
+    </section>
+    <!--
           5. Create a search results page in this folder and link to it from here.
 
           In this new page you create…
@@ -111,16 +232,49 @@
             Excerpt:
               Develop your critical thinking skills. Boost your ability to solve problems and make the right decisions at work, home and in study.
         -->
-      </section>
-      <section>
-        <h2>A definition</h2>
-        <!--
+    <section>
+      <h2>A definition</h2>
+      <h3>
+        <b>markup</b>
+      </h3>
+      <p>/'ma:k&#x028C;p/</p>
+      <p>
+        <b><em>noun</em></b>
+      </p>
+      <p>
+        noun: <b>markup</b>; plural noun: <b>markups</b>;noun: <b>mark-up</b>; plural noun: <b>mark-ups</b>
+      </p>
+      <ol>
+        <li>
+          <p>
+            <b>the amount added to the cost price of goods to cover overheads and profit.</b><br>
+            <q>a markup of 50 per cent</q>
+          </p>
+        </li>
+        <li>
+          <p>
+            <b>the process of result of correcting text in preparation for printing.</b>
+          </p>
+        </li>
+        <li>
+          <p>
+            <kbd>COMPUTING</kbd><br>
+            <b>a set of tags assigned to elements of a text to indicate thier relation to the rest of the text or
+              dictate how they should be displayed.</b><br>
+            <q>markup languges</q>
+          </p>
+        </li>
+      </ol>
+
+      <!--
           6. Create the HTML necessary for the image `markup.png` in this folder.
           It is a definition of the word 'Markup'.
         -->
-        <img src="markup.png" alt="There are three definitions for the word 'Markup'">
-      </section>
+      <img src="markup.png" alt="There are three definitions for the word 'Markup'">
 
-    </main>
-  </body>
+    </section>
+
+  </main>
+</body>
+
 </html>
