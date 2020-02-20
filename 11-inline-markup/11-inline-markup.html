@@ -20,7 +20,7 @@
 
     <!-- In this example, the 'Wait!' needs stressing when vocalised -->
     <p>
-      <em>"Wait!"</em>
+      <q><em>"Wait!"</em></q>
       shouted Jesse.
     </p>
 
@@ -29,8 +29,7 @@
     <!-- It's a good idea to tell a computer how to read a datetime: -->
     <p>
       The time is now
-      <time>02:00</time>, on
-      12<sup>th</sup> 02/2020.
+      <time datetime="2020-02-12T02:00:00+03:00"></time>2pm, on Thursday.
     </p>
 
 
@@ -38,9 +37,9 @@
 
     <!-- What do 'H' and 'O' mean here? -->
     <p>
-      The elements <dfn>H</dfn>
-      and <dfn>O</dfn>, bond as
-      H<sub>2</sub>O, or water (as it is colloquaially known).
+      The elements <abbr title="Hydrogen">H</abbr>
+      and <abbr title="Oxygen">O</abbr>, bond as
+      H<sub>2</sub>O, or <i>water</i> (as it is colloquaially known).
     </p>
 
     <hr>
@@ -49,8 +48,8 @@
     <p>
       Editor's Notes:<br>
 
-      Please use <code>&lt;b&gt;</code> to bold this word: <b>Critical</b><br>
-      Please use <code>&lt;i&gt;</code> to italicise this word: <i>Doubtful</i><br>
+      Please use <kbd>CTRL</kbd> + <kbd>B</kbd> to bold this word: <b>Critical</b><br>
+      Please use <kbd>CTRL</kbd> + <kbd>I</kbd> to italicise this word: <i>Doubtful</i><br>
 
       Please underline this word: <u>Thinking</u><br>
       Please put a line through this word: <s>Assuming</s><br>
@@ -64,12 +63,13 @@
 
     <!-- We can do the same with samples of code, even maintaining the whitespace: -->
     <p>
-      "Woah! <q>that</q> was unexpected!" exclaimed Keith.<br>
+      <q><em>Woah!</em> <code>that</code> was unexpected!</q> exclaimed Keith.<br>
       Curiously, Jesse looked at the output on Keith's screen and it said:<br>
-
-          Unexpected value for argument <q>that</q>
-            - in function <kbd>clickHandler</kbd>, line <sup>12</sup>
-            - called from function anonymous, line <sup>34</sup>
+<pre>
+Unexpected value for argument <code>'that'</code>
+  - in function <code>clickHandler</code>, line <sup>12</sup>
+  - called from function anonymous, line <sup>34</sup>
+</pre>
     </p>
 
     <hr>
@@ -83,7 +83,7 @@
     <ul>
       <li>
         <a href="#bell-222">Bell 222</a>:<br>
-        The Model <var>222</var> is a helicopter made by the <abbr>Bell Helicopter Corporation</abbr>.
+        The Model <var>222</var> is a <mark>helicopter</mark> made by the <abbr>Bell <mark>Helicopter</mark> Corporation</abbr>.
       </li>
     </ul>
 
